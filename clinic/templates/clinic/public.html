@@ -1,0 +1,10 @@
+<h2>Patient Follow-ups</h2>
+
+{% for followup in followups %}
+  <p>Patient: {{ followup.patient_name }}</p>
+  <p>Date: {{ followup.due_date }}</p>
+  <p>Status: {{ followup.status }}</p>
+  <hr>
+{% empty %}
+  <p>No follow-ups available</p>
+{% endfor %}
